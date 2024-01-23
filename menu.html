@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap'); 
+
+        * {
+
+            box-sizing: border-box;
+            border: none;
+            outline: none;
+            font-family: 'Poppins', sans-serif;
+            text-transform: capitalize;
+            transition: all 0.2s linear;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 10px;
+
+        }
+
+        footer {
+
+            background-color: #333;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+            border-radius: 10px;
+
+        }
+
+        nav li {
+            float: right;
+            display: inline;
+            margin: 15px
+        }
+
+        nav li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px
+        }
+
+        footer p {
+            font-size: 20px
+        }
+
+
+        .menu-item {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            /* Add this line to create a flex container */
+        }
+
+        .menu-item h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .menu-item p {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .menu-item .rating {
+            color: #f39c12;
+        }
+
+        .menu-item .price {
+            font-weight: bold;
+        }
+
+        .menu-item img {
+            margin-left: auto;
+            /* Push the image to the right */
+            max-width: 130px;
+            /* Adjust the image size as needed */
+            border-radius: 10px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search-bar {
+            margin-right: 20px;
+        }
+
+        .search-bar input {
+            width: 150px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .search-bar button {
+            padding: 10px;
+            border: none;
+            background-color: #333;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .filter select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+
+        .cart {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+
+            top: 0;
+            right: 0;
+            border-radius: 10px;
+            align-items: center;
+        }
+
+
+        .cart-item {
+            border-bottom: 1px solid #555;
+            padding: 0.5em;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cartbutton {
+            padding: 14px;
+            border: none;
+            background-color: #333;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .order {
+            padding: 12px;
+            width: 200px;
+            border: none;
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            border-radius: 10px;
+            cursor: pointer;
+            letter-spacing: 1px;
+        }
+
+        .center {
+            margin: 0;
+            position: absolute;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>KHAN FOOD COURT</h1>
+        <nav>
+            <ul>
+                <li><a href="login.html">Login</a>
+                <li><a href="index2.html">Home</a>
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button class="button" type="submit">Search</button>
+        </div>
+        <div class="filter">
+            <select name="category">
+                <option value="Veg">Veg</option>
+                <option value="Non-Veg">Non-Veg</option>
+                <option value="Starters">Starters</option>
+                <option value="Drinks">Drinks</option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="menu-item">
+        <div>
+            <h3>Veg Manchurian</h3>
+            <p>Tomato sauce, mozzarella, fresh basil</p>
+            <p class="rating">Rating: ★★★★✩</p>
+            <p class="price">Price : ₹120</p>
+            <button class="cartbutton" onclick="addToCart('veg Manchurian', 120.00)">Add to Cart</button>
+
+        </div>
+        <img src="product2.jfif" alt="Margherita Pizza">
+    </div>
+
+
+    <div class="menu-item">
+        <div>
+            <h3>Chicken Manchurian</h3>
+            <p>Tomato sauce, mozzarella, Chicken</p>
+            <p class="rating">Rating: ★★★★✩</p>
+            <p class="price">price : ₹120</p>
+            <button class="cartbutton" onclick="addToCart('Chicken Manchurian', 120.00)">Add to Cart</button>
+
+        </div>
+        <img src="product3.jfif" alt="Margherita Pizza">
+    </div>
+    <div class="menu-item">
+        <div>
+            <h3>Parota</h3>
+            <p>Tomato sauce, mozzarella, Chicken</p>
+            <p class="rating">Rating: ★★★★✩</p>
+            <p class="price">price : ₹40 per plate (per plate contains 2 parota)</p>
+            <button class="cartbutton" onclick="addToCart('Parota', 40.00)">Add to Cart</button>
+
+        </div>
+        <img src="product4.jfif" alt="Margherita Pizza">
+    </div>
+    <div class="cart">
+        <h2>Shopping Cart</h2>
+        <div id="cartItems"></div>
+        <p>Total: ₹<span id="cartTotal"></span></p>
+        <hr>
+        <br>
+        <br>
+        <div class="center">
+            <a href="payment.html">
+                <button class="order">Proceed To Payments</button>
+            </a>
+        </div>
+        <br><br>
+    </div>
+    <br>
+    <!-- Add more menu items here -->
+    <footer>
+        <p>© 2023 My Online Store. All rights reserved.</p>
+    </footer>
+    <script>
+        let cart = [];
+
+        function addToCart(productName, price) {
+            cart.push({ productName, price });
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItemsElement = document.getElementById('cartItems');
+            const cartTotalElement = document.getElementById('cartTotal');
+
+            cartItemsElement.innerHTML = '';
+            let total = 0;
+
+            cart.forEach(item => {
+                const cartItemElement = document.createElement('div');
+                cartItemElement.classList.add('cart-item');
+                cartItemElement.innerHTML = `<span>${item.productName}</span><span>₹${item.price.toFixed(2)}</span>`;
+                cartItemsElement.appendChild(cartItemElement);
+
+                total += item.price;
+            });
+
+            cartTotalElement.textContent = total.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>

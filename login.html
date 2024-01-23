@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+        * {
+
+            box-sizing: border-box;
+            border: none;
+            outline: none;
+            font-family: 'Poppins', sans-serif;
+            text-transform: capitalize;
+            transition: all 0.2s linear;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 10px;
+        }
+
+        footer {
+            border-radius: 10px;
+            background-color: #333;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        nav li {
+            float: right;
+            display: inline;
+            margin: 15px
+        }
+
+        nav li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px
+        }
+
+        footer p {
+            font-size: 20px
+        }
+
+        /* Add your CSS styles here */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Add padding to containers */
+        .container {
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        }
+
+        /* Full-width input fields */
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+            border-radius: 10px
+        }
+
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Overwrite default styles of hr */
+        <!-- hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        -->
+
+        /* Set a style for the submit/register button */
+        .loginbtn {
+            background-color: #333;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+            border-radius: 10px;
+            letter-spacing: 1px;
+        }
+
+        .loginbtn:hover {
+            opacity: 1;
+        }
+
+        /* Add a blue email color to links */
+        a {
+            color: dodgerblue;
+            /* Set a grey background color and center the email of the "sign in" section */
+        }
+
+
+        .signin {
+            background-color: #f1f1f1;
+            text-align: cente
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>KHAN FOOD COURT</h1>
+        <nav>
+            <ul>
+                <li><a href="menu.html">Menu</a>
+                <li><a href="index2.html">Home</a>
+            </ul>
+        </nav>
+    </header>
+    <form action="action_page.php">
+
+        <h1 align="center">Login</h1>
+        <p align="center">Enter your details to login</p>
+
+        <div class="container">
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email" name="email" id="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+
+            <hr>
+
+
+            <button type="submit" class="loginbtn">Login</button>
+        </div>
+
+        <div class="container">
+            <p>Do not have an account? <a href="reg2.html">Register here</a>.</p>
+        </div>
+    </form>
+    <footer>
+        <p>© 2024 Khan Food Court. All rights reserved.</p>
+    </footer>
+
+
+</body>
+
+</html>
